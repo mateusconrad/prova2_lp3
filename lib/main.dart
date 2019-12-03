@@ -20,9 +20,7 @@ class _PaginaHomeState extends State<PaginaHome> {
   TextEditingController total = TextEditingController();
 
   @override
-  void initState() {
-    super.initState();
-  }
+  void initState() => super.initState();
 
   @override
   Widget build(BuildContext context) {
@@ -45,8 +43,9 @@ class _PaginaHomeState extends State<PaginaHome> {
               height: 50,
               alignment: Alignment.centerLeft,
               child: SizedBox.expand(
-                child: FlatButton(
-                  child: Text(
+                child: OutlineButton.icon(
+                  icon: Icon(Icons.graphic_eq),
+                  label: Text(
                     "Buscar Total",
                   ),
                   onPressed: () => buscaValor(context),

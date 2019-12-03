@@ -18,9 +18,15 @@ class _DadosState extends State<Dados> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
+            SizedBox(
+              height: 30,
+            ),
             TextFormField(
               keyboardType: TextInputType.text,
               controller: valorA,
+            ),
+            SizedBox(
+              height: 30,
             ),
             TextFormField(
               keyboardType: TextInputType.text,
@@ -32,10 +38,10 @@ class _DadosState extends State<Dados> {
             ),
             Container(
               height: 50,
-              alignment: Alignment.centerLeft,
               child: SizedBox.expand(
-                child: FlatButton(
-                  child: Text(
+                child: OutlineButton.icon(
+                  icon: Icon(Icons.threesixty),
+                  label: Text(
                     "Somar A + B",
                     style: TextStyle(
                     ),

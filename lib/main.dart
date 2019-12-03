@@ -11,7 +11,6 @@ void main() {
   ));
 }
 
-
 class PaginaHome extends StatefulWidget {
   @override
   _PaginaHomeState createState() => _PaginaHomeState();
@@ -50,9 +49,7 @@ class _PaginaHomeState extends State<PaginaHome> {
                   child: Text(
                     "Buscar Total",
                   ),
-                  onPressed: () {
-                    buscaValor(context);
-                  },
+                  onPressed: () => buscaValor(context),
                 ),
               ),
             ),
@@ -67,9 +64,9 @@ class _PaginaHomeState extends State<PaginaHome> {
       context,
       MaterialPageRoute(builder: (context) => Dados()),
     );
-    setState(() {
-      total.text = result.toString();
-    });
+    setState(
+      () => total.text = result.toString(),
+    );
     print(result);
   }
 }
